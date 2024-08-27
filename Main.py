@@ -9,6 +9,10 @@ import requests
 import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 import io
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 class ActivityTracker:
     def __init__(self, config_url: str, bucket_name: str, s3_prefix: str = ''):
